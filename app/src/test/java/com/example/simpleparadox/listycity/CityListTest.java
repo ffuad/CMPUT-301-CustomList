@@ -61,7 +61,7 @@ class CityListTest {
         assertEquals(2, cityList.getCities().size());
 
         City city = new City("Regina", "Saskatchewan");
-        cityList.add(city);
+        cityList.delete(city);
 
         assertEquals(1, cityList.getCities().size());
         assertTrue(!cityList.getCities().contains(city));

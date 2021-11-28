@@ -58,12 +58,10 @@ class CityListTest {
     void testDelete(){
         CityList cityList = mockCityList();
 
-        assertEquals(2, cityList.getCities().size());
-
-        City city = new City("Regina", "Saskatchewan");
-        cityList.delete(city);
-
         assertEquals(1, cityList.getCities().size());
+        cityList.delete(mockCity());
+
+        assertEquals(0, cityList.getCities().size());
         assertTrue(!cityList.getCities().contains(city));
     }
     @Test
